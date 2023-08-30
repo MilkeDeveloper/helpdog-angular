@@ -5,7 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'rubik': ['rubik'],
+      'merriweather': ['Merriweather']
+    }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  }
 }
 
