@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PaymentService } from '../payment.service';
-import { PaymentDataService } from '../payment-data.service';
+import { PaymentService } from '../payment-services/payment.service';
+
 
 @Component({
   selector: 'app-payment-modal',
@@ -10,7 +10,7 @@ export class PaymentModalComponent {
   ValueAmount: number = 0;
   message: string | undefined;
 
-  constructor(private paymentService: PaymentService, private paymentDataService: PaymentDataService) {
+  constructor(private paymentService: PaymentService) {
     this.paymentService.sharedAmount
   }
 

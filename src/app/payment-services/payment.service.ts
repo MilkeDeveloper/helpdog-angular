@@ -7,9 +7,7 @@ export class PaymentService {
   
   sharedAmount: number = 0;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   getvalue1() {
     console.log(this.sharedAmount)

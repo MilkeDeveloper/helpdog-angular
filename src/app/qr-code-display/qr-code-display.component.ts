@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PaymentService } from '../payment.service';
+import { PaymentService } from '../payment-services/payment.service';
 
 @Component({
   selector: 'app-qr-code-display',

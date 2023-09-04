@@ -38,8 +38,6 @@ alert_type: string = ''
       console.log('logado COM SUCESSO')
       this.drawerClosed = true
       return this.navigateToDashboard()
-      
-     
     }
     else {
       this.showAlert = true

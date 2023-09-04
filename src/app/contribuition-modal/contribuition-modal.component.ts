@@ -1,9 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { PaymentService } from '../payment.service';
-import { ApiServiceService } from '../api-service.service';
+import { PaymentService } from '../payment-services/payment.service';
+import { ApiServiceService } from '../api-services/api-service.service';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.models';
-import { PaymentDataService } from '../payment-data.service';
 import { EmailValidator, FormBuilder, FormControl, MaxValidator, Validators } from '@angular/forms';
 
 @Component({

@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { QRCodeModule } from 'angularx-qrcode';
 import { PaymentModalComponent } from './payment-modal/payment-modal.component';
 import { QrCodeDisplayComponent } from './qr-code-display/qr-code-display.component';
-import { PaymentService } from './payment.service';
+import { PaymentService } from './payment-services/payment.service';
 
 @NgModule({
   declarations: [
