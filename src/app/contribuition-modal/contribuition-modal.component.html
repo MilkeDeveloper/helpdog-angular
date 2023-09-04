@@ -1,9 +1,11 @@
-<dialog id="loginModal" class="modal ">
-    <form method="dialog" class=" modal-box flex flex-col items-center">
-      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+<dialog id="LoginModal" class="modal ">
+    <form [formGroup]="form" method="dialog" class=" modal-box flex flex-col items-center">
+      <button (click)="clearForm()" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
       <h3 class=" font-rubik font-bold text-lg text-[#3C184E]">Faça sua doação</h3>
-      <input  type="email" placeholder="E-mail" class=" bg-slate-300 border-none mt-6 input input-bordered input-primary w-full max-w-xs" />
-      <input step="00.01" type="number" placeholder="Valor" class=" bg-slate-300 border-none mt-6 input input-bordered appearance-none input-primary w-full max-w-xs"/>
-      <button class="px-12 rounded-full mt-6 btn bg-[#713FFF] hover:bg-[#5f36ce] text-white font-rubik font-light">Enviar</button>
+      <input formControlName="name" [(ngModel)]="name" name="name" type="name" placeholder="Nome" class=" bg-slate-300 border-none mt-6 input input-bordered input-primary w-full max-w-xs" />
+      <input formControlName="email" [(ngModel)]="email" name="email" type="email" placeholder="E-mail" class=" bg-slate-300 border-none mt-6 input input-bordered input-primary w-full max-w-xs" />
+      <input formControlName="amount" [(ngModel)]="amount" name="amount" step="00.01" type="text" placeholder="0 ,00" class=" bg-slate-300 border-none mt-6 input input-bordered appearance-none input-primary w-full max-w-xs"/>
+      <button (click)="registerUser()" onclick="PaymentModal.showModal()" class="px-12 rounded-full mt-6 btn bg-[#713FFF] hover:bg-[#5f36ce] text-white font-rubik font-light">Enviar</button>
     </form>
+    <app-payment-modal></app-payment-modal>
 </dialog>

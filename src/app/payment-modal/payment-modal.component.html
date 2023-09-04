@@ -1,0 +1,15 @@
+
+<dialog id="PaymentModal" class="modal ">
+    <form method="dialog" class=" modal-box flex flex-col items-center">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+      <h3 class=" font-rubik font-bold text-2xl text-[#3C184E] mt-4 ">Leia o QR Code</h3>
+      <div>
+        <app-qr-code-display></app-qr-code-display>
+        <p class="mb-6 font-rubik font-bold text-xl text-center text-[#3C184E]" >
+          {{ getSharedAmount() }}  Valor: R$ {{ message }}
+        </p>
+      </div>
+      
+    </form>
+    
+</dialog>

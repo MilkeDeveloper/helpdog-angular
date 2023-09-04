@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -93,15 +94,28 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "bc631faa-cac6-4238-9d64-621e039c825a"
+    "analytics": "bc631faa-cac6-4238-9d64-621e039c825a",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

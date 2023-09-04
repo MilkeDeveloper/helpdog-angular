@@ -1,13 +1,44 @@
 <div data-theme="light" class=" h-[960px] flex overflow-hidden ">
     <div class=" flex ml-[60px] mt-[31px]">
       <app-logo-svg></app-logo-svg>
+      
       <app-text-section></app-text-section>
       
     </div>
     <div>
       <app-dog-img-section></app-dog-img-section>
     </div>
-    <button (click)="navigateToAbout()" class="mx-auto scale-150 bg-transparent btn text-purple-900 font-rubik font-semibold border-none relative right-[200px] top-[40px] ">
-        About Us
-     </button>
+</div>
+<div class="drawer drawer-end">
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Page content here -->
+    
+    <label for="my-drawer-4" class=" border-none hover:border-none text-purple-900 bg-slate-300 hover:bg-slate-200 absolute right-[50px] bottom-[870px] btn drawer-button btn-circle swap swap-rotate">
+      <!-- this hidden checkbox controls the state -->
+      <input type="checkbox" />
+      <!-- hamburger icon -->
+      <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+      <!-- close icon -->
+      <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+    </label>
+  </div> 
+
+  <div class="drawer-side">
+    <label for="my-drawer-4" class="drawer-overlay"></label>
+    <ul class="menu px-10 p- w-80 min-h-full bg-base-200 text-base-content">
+      <!-- Sidebar content here -->
+      <p class="my-6 text-xl font-rubik font-semibold text-center">Painel</p>
+      <p class="my-14 text-xl font-rubik font-semibold">Faça seu login</p>
+      <input [(ngModel)]="user.username" type="email" placeholder="Usuário" class="input border-none input-primary w-full max-w-xs" />
+      <input [(ngModel)]="user.password"type="password" placeholder="Senha" class=" mt-4 input border-none input-primary w-full max-w-xs" />
+      <button (click)="loginAuthorize()" class=" mt-8 btn btn-primary">Entrar</button>
+      <div *ngIf="showAlert" class="alert {{ alert_type }} mt-6
+      animate-fade-up animate-once animate-duration-500 animate-delay-100 animate-ease-in-out
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+        <span  class="font-rubik">Usuário ou senha inválidos!</span>
+      </div>
+    </ul>
+  </div>
 </div>
